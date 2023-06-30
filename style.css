@@ -1,3 +1,5 @@
+/* General settings */
+
 html {
     height: 100vh;
 }
@@ -8,8 +10,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Hero, Roboto, sans-serif;
-    height: 100%;
 }
+
+/* Header and Footer Section (Top & Bottom) */
 
 header {
     background-color: #1F2937;
@@ -20,7 +23,9 @@ header ul {
     align-items: baseline;
     list-style-type: none;
     padding: 0;
-    gap: 10px;
+    gap: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header-logo {
@@ -38,10 +43,13 @@ a {
 footer {
     background-color: #1F2937;
     color: #F9FAF8;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* Content Part (Middle Section) */
 
 .content {
     display: flex;
@@ -50,13 +58,10 @@ footer {
 }
 
 content > div {
-    flex: 1;
+    flex: auto;
 }
 
-header,
-footer {
-    flex-basis: 100px;
-}
+/* Top Part (This website is awesome) */
 
 .top-part {
     display: flex;
@@ -66,17 +71,137 @@ footer {
     align-items: center;
     font-size: 48px;
     font-weight: 900;
+    flex-basis: 300px;
 }
 
 .top-one {
     flex: 1;
+    flex-basis: 49%;
 }
 
 .top-part > img {
-    align-self: stretch;
     flex: 1;
+    height: 200px;
+    flex-basis: 49%;
     background-color: #666666;
+    text-align: center;
 }
+
+button {
+    background-color: #3882F6;
+    border-radius: 10px;
+    border: 2px solid #3882F6;
+    padding: 4px 32px;
+}
+
+/* Top Middle Part (Some random information section) */
+.top-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-part {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 200px;
+    gap: 64px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1F2937;
+}
+
+.item > p {
+    max-width: 150px;
+    text-align: center;
+}
+
+.title-middle {
+    margin: 50px 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.square-border {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #3882F6;
+    border-radius: 10%;
+}
+
+/* Bottom Middle Part (Quote section) */
+
+/* Added div to add more value to the bottom-middle class selector */
+div.bottom-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 300px;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    padding: 0 20%;
+}
+
+.quote {
+    margin: 0;
+    font-size: 36px;
+    font-style: italic;
+}
+
+.quote-author {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/* Bottom Part (NOT FOOTER Call to action section)*/
+
+div.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 300px;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3882F6;
+    height: 50%;
+    flex-basis: 80%;
+    border: 1px solid #3882F6;
+    border-radius: 10px;
+}
+
+.block-text {
+    flex-basis: 80%;
+}
+
+.block-text > p {
+    margin: 0;
+    color: #E5E7EB;
+}
+
+.bold {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.call-button {
+    border: 2px solid #E5E7EB;
+}
+
+/* Shared Settings (2 or more parts) */
 
 header,
 footer,
@@ -91,9 +216,7 @@ button {
     color: #E5E7EB;
 }
 
-button {
-    background-color: #3882F6;
-    border-radius: 10%;
-    border: 2px solid #3882F6;
-    padding: 4px 8px;
+header,
+footer {
+    flex-basis: 100px;
 }
